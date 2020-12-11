@@ -1,6 +1,6 @@
 # flutter_sample
 
-A new Flutter application.
+A sample for Flutter.
 
 ## Getting Started
 

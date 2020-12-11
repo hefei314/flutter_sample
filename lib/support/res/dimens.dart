@@ -1,0 +1,94 @@
+///
+/// author: hefei
+/// time  : 2020/12/11
+/// desc  : 资源-尺寸
+///
+class Dimens {
+  static const double font_sp10 = 10.0;
+  static const double font_sp12 = 12.0;
+  static const double font_sp14 = 14.0;
+  static const double font_sp16 = 16.0;
+  static const double font_sp18 = 18.0;
+  static const double font_sp20 = 20.0;
+  static const double font_sp22 = 22.0;
+  static const double font_sp24 = 24.0;
+  static const double font_sp26 = 26.0;
+  static const double font_sp28 = 28.0;
+  static const double font_sp30 = 30.0;
+
+  static const double gap_dp1 = 1.0;
+  static const double gap_dp2 = 2.0;
+  static const double gap_dp3 = 3.0;
+  static const double gap_dp4 = 4.0;
+  static const double gap_dp5 = 5.0;
+  static const double gap_dp6 = 6.0;
+  static const double gap_dp7 = 7.0;
+  static const double gap_dp8 = 8.0;
+  static const double gap_dp9 = 9.0;
+  static const double gap_dp10 = 10.0;
+  static const double gap_dp11 = 11.0;
+  static const double gap_dp12 = 12.0;
+  static const double gap_dp13 = 13.0;
+  static const double gap_dp14 = 14.0;
+  static const double gap_dp15 = 15.0;
+  static const double gap_dp16 = 16.0;
+  static const double gap_dp17 = 17.0;
+  static const double gap_dp18 = 18.0;
+  static const double gap_dp19 = 19.0;
+  static const double gap_dp20 = 20.0;
+  static const double gap_dp21 = 21.0;
+  static const double gap_dp22 = 22.0;
+  static const double gap_dp23 = 23.0;
+  static const double gap_dp24 = 24.0;
+  static const double gap_dp25 = 25.0;
+  static const double gap_dp26 = 26.0;
+  static const double gap_dp27 = 27.0;
+  static const double gap_dp28 = 28.0;
+  static const double gap_dp29 = 29.0;
+  static const double gap_dp30 = 30.0;
+  static const double gap_dp31 = 31.0;
+  static const double gap_dp32 = 32.0;
+  static const double gap_dp33 = 33.0;
+  static const double gap_dp34 = 34.0;
+  static const double gap_dp35 = 35.0;
+  static const double gap_dp36 = 36.0;
+  static const double gap_dp37 = 37.0;
+  static const double gap_dp38 = 38.0;
+  static const double gap_dp39 = 39.0;
+  static const double gap_dp40 = 40.0;
+  static const double gap_dp41 = 41.0;
+  static const double gap_dp42 = 42.0;
+  static const double gap_dp43 = 43.0;
+  static const double gap_dp44 = 44.0;
+  static const double gap_dp45 = 45.0;
+  static const double gap_dp46 = 46.0;
+  static const double gap_dp47 = 47.0;
+  static const double gap_dp48 = 48.0;
+  static const double gap_dp49 = 49.0;
+  static const double gap_dp50 = 50.0;
+  static const double gap_dp52 = 52.0;
+  static const double gap_dp54 = 54.0;
+  static const double gap_dp56 = 56.0;
+  static const double gap_dp58 = 58.0;
+  static const double gap_dp60 = 60.0;
+  static const double gap_dp62 = 62.0;
+  static const double gap_dp64 = 64.0;
+  static const double gap_dp66 = 66.0;
+  static const double gap_dp68 = 68.0;
+  static const double gap_dp70 = 70.0;
+  static const double gap_dp72 = 72.0;
+  static const double gap_dp74 = 74.0;
+  static const double gap_dp76 = 76.0;
+  static const double gap_dp78 = 78.0;
+  static const double gap_dp80 = 80.0;
+  static const double gap_dp82 = 82.0;
+  static const double gap_dp84 = 84.0;
+  static const double gap_dp86 = 86.0;
+  static const double gap_dp88 = 88.0;
+  static const double gap_dp90 = 90.0;
+  static const double gap_dp92 = 92.0;
+  static const double gap_dp94 = 94.0;
+  static const double gap_dp96 = 96.0;
+  static const double gap_dp98 = 98.0;
+  static const double gap_dp100 = 100.0;
+}

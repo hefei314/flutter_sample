@@ -1,5 +1,5 @@
 name: flutter_sample
-description: A new Flutter application.
+description: A sample for Flutter.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -28,10 +28,46 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
+  # Basic lock mechanism to prevent concurrent access to asynchronous code
+  synchronized: '>=1.5.1 <4.0.0'
+  # This plugin allows Flutter apps to discover network connectivity and configure themselves accordingly.
+  connectivity: ^2.0.0
+  # Get current device information from within the Flutter application.
+  device_info: '>=0.4.2+9 <2.0.0'
+  # This Flutter plugin provides an API for querying information about an application package.
+  package_info: '>=0.4.3 <2.0.0'
+  # Shared preferences plugin
+  shared_preferences: '>=0.5.12+2 <2.0.0'
+  # A powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
+  dio: 3.0.10
+  # A Flutter plugin for iOS and Android allowing access to the device cameras.
+  camera: 0.5.8+11
+  # A Flutter plugin that provides a WebView widget.
+  webview_flutter: ^1.0.7
+  # A Flutter plugin for launching a URL in the mobile platform. Supports iOS, Android, web, Windows, macOS, and Linux.
+  url_launcher: ^5.7.7
+  # Provides Dart Build System builders for handling JSON.
+  json_annotation: ^3.0.0
+
+  # Toast Library for Flutter.
+  fluttertoast: ^7.1.1
+  # A simple zoomable image/content widget for Flutter.
+  photo_view: ^0.10.2
+  # The best swiper for flutter , with multiple layouts, infinite loop. Compatible with Android & iOS.
+  flutter_swiper: ^1.1.6
+  # A flutter library to show images from the internet and keep them in the cache directory.
+  cached_network_image: ^2.3.3
+  # a widget provided to the flutter scroll component drop-down refresh and pull up load.support android and ios.
+  pull_to_refresh: ^1.6.2
+  # A Flutter staggered grid view which supports multiple columns with rows of varying sizes.
+  flutter_staggered_grid_view: ^0.3.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # Provides Dart Build System builders for handling JSON.
+  build_runner: ^1.0.0
+  json_serializable: ^3.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -45,9 +81,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
