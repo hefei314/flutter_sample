@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/app/constants.dart';
 import 'package:flutter_sample/app/global.dart';
+import 'package:flutter_sample/generated/l10n.dart';
 import 'package:flutter_sample/support/bean/splash_bean.dart';
 import 'package:flutter_sample/support/route/navigator_util.dart';
 import 'package:flutter_sample/support/utils/assets_util.dart';
@@ -29,7 +30,7 @@ class _SplashPageState extends State<SplashPage> {
 
   static const int TYPE_START_PAGE = 0; // 启动页
   static const int TYPE_GUIDE_PAGE = 1; // 引导页
-  static const int TYPE_AD_PAGE = 2; // 广告页
+  static const int TYPE_AD_PAGE    = 2; // 广告页
 
   int _type = TYPE_START_PAGE;
 
@@ -89,7 +90,7 @@ class _SplashPageState extends State<SplashPage> {
                           color: Colors.transparent,
                         ),
                         child: Text(
-                          "$_countdownValue | 跳过",
+                          "$_countdownValue | ${S.of(context).splashSkip}",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ),
@@ -173,7 +174,7 @@ class _SplashPageState extends State<SplashPage> {
             offstage: _currentGuideIndex < _guideList.length - 1,
             child: CupertinoButton(
               color: Theme.of(context).primaryColor,
-              child: Text('立即体验'),
+              child: Text(S.of(context).splashStart),
               onPressed: () {
                 _goMain();
                 // 设置为非首次安装

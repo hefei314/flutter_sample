@@ -96,11 +96,11 @@ class HttpManager {
       if (onSuccess != null) {
         onSuccess(response.data);
       }
-    } on DioError catch (e, s) {
+    } on DioError catch (e) {
       if (onError != null && e.type != DioErrorType.CANCEL) {
         onError(ApiException.dioError(e));
       }
-    } catch (e, s) {
+    } catch (e) {
       if (e is TypeError) {
         if (onError != null) {
           onError(ApiException(ApiRequestCode.PARSE_ERROR, "数据转换失败，请稍后重试！"));
@@ -148,7 +148,7 @@ class HttpManager {
       if (onSuccess != null) {
         onSuccess(response.data);
       }
-    } on DioError catch (e, s) {
+    } on DioError catch (e) {
       if (onError != null && e.type != DioErrorType.CANCEL) {
         onError(ApiException.dioError(e));
       }
@@ -200,7 +200,7 @@ class HttpManager {
       if (onSuccess != null) {
         onSuccess(response.data);
       }
-    } on DioError catch (e, s) {
+    } on DioError catch (e) {
       if (onError != null && e.type != DioErrorType.CANCEL) {
         onError(ApiException.dioError(e));
       }
@@ -252,7 +252,7 @@ class HttpManager {
       if (onSuccess != null) {
         onSuccess(response.data);
       }
-    } on DioError catch (e, s) {
+    } on DioError catch (e) {
       if (onError != null && e.type != DioErrorType.CANCEL) {
         onError(ApiException.dioError(e));
       }
@@ -304,7 +304,7 @@ class HttpManager {
       if (onSuccess != null) {
         onSuccess(response.data);
       }
-    } on DioError catch (e, s) {
+    } on DioError catch (e) {
       if (onError != null && e.type != DioErrorType.CANCEL) {
         onError(ApiException.dioError(e));
       }
@@ -368,7 +368,7 @@ class HttpManager {
       if (onSuccess != null) {
         onSuccess(response.data);
       }
-    } on DioError catch (e, s) {
+    } on DioError catch (e) {
       if (onError != null && e.type != DioErrorType.CANCEL) {
         onError(ApiException.dioError(e));
       }
@@ -425,7 +425,7 @@ class HttpManager {
       if (onSuccess != null) {
         onSuccess(response.data);
       }
-    } on DioError catch (e, s) {
+    } on DioError catch (e) {
       if (onError != null && e.type != DioErrorType.CANCEL) {
         onError(ApiException.dioError(e));
       }

@@ -26,7 +26,6 @@ class TextStyles {
     fontSize: Dimens.font_sp14,
     color: Colours.text_normal,
   );
-
 }
 
 class Decorations {

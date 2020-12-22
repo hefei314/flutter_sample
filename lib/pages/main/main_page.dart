@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/pages/basic/basic_page.dart';
 import 'package:flutter_sample/pages/example/example_page.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 ///
 /// author: hefei
@@ -13,37 +14,55 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin {
-  int _selectedIndex = 0;
-  var _pageList;
+  TabController _tabController;
 
   @override
   void initState() {
     super.initState();
-    _pageList = [BasicPage(), ExamplePage()];
+    _tabController = TabController(vsync: this, length: 2);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter Sample'),
+    return WillPopScope(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Flutter Sample"),
+          bottom: TabBar(
+            controller: _tabController,
+            tabs: <Tab>[
+              Tab(
+                text: "Basic",
+              ),
+              Tab(
+                text: "Example",
+              ),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          controller: _tabController,
+          children: <Widget>[
+            BasicPage(),
+            ExamplePage(),
+          ],
+        ),
       ),
-      body: _pageList[_selectedIndex],
-      bottomNavigationBar: new BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.layers_rounded), label: 'Basic'),
-          BottomNavigationBarItem(icon: Icon(Icons.lightbulb), label: 'Example'),
-        ],
-        fixedColor: Theme.of(context).primaryColor,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ),
+      onWillPop: _doubleClickBack,
     );
   }
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  DateTime _lastPressedAt;
+
+  Future<bool> _doubleClickBack() {
+    if (_lastPressedAt == null ||
+        DateTime.now().difference(_lastPressedAt) > Duration(seconds: 1)) {
+      Fluttertoast.showToast(
+          msg: "再按一次退出程序", toastLength: Toast.LENGTH_LONG, gravity: ToastGravity.BOTTOM);
+      _lastPressedAt = DateTime.now();
+      return Future.value(false);
+    } else {
+      return Future.value(true);
+    }
   }
 }
