@@ -41,6 +41,8 @@ dependencies:
   shared_preferences: '>=0.5.12+2 <2.0.0'
   # A powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
   dio: 3.0.10
+  # A wrapper around InheritedWidget to make them easier to use and more reusable.
+  provider: ^4.3.2+2
   # A Flutter plugin for iOS and Android allowing access to the device cameras.
   camera: 0.5.8+11
   # A Flutter plugin that provides a WebView widget.

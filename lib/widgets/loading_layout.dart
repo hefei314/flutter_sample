@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/support/res/dimens.dart';
 
-enum LoadingState { State_Success, State_Empty, State_Error, State_No_Network, State_Loading }
+enum LoadingState { Success, Empty, Error, NoNetwork, Loading }
 
 ///
 /// author: hefei
@@ -11,17 +11,26 @@ enum LoadingState { State_Success, State_Empty, State_Error, State_No_Network, S
 class LoadingLayout extends StatefulWidget {
   LoadingLayout(
       {Key key,
-      this.state = LoadingState.State_Loading,
+      this.state: LoadingState.Loading,
+      this.emptyView,
+      this.errorView,
+      this.loadingView,
       this.contentView,
-      this.errorRetry,
-      this.emptyRetry})
+      this.noNetworkView,
+      this.emptyRetry,
+      this.errorRetry})
       : super(key: key);
 
   final LoadingState state;
 
+  final Widget emptyView;
+  final Widget errorView;
+  final Widget loadingView;
   final Widget contentView;
-  final VoidCallback errorRetry;
+  final Widget noNetworkView;
+
   final VoidCallback emptyRetry;
+  final VoidCallback errorRetry;
 
   @override
   _LoadingLayoutState createState() => _LoadingLayoutState();
@@ -30,29 +39,25 @@ class LoadingLayout extends StatefulWidget {
 class _LoadingLayoutState extends State<LoadingLayout> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      child: _buildWidget(),
-    );
+    return _buildWidget();
   }
 
   Widget _buildWidget() {
     switch (widget.state) {
-      case LoadingState.State_Success:
+      case LoadingState.Empty:
+        return widget.emptyView ?? _buildEmptyView();
+        break;
+      case LoadingState.Error:
+        return widget.errorView ?? _buildErrorView();
+        break;
+      case LoadingState.Loading:
+        return widget.loadingView ?? _buildLoadingView();
+        break;
+      case LoadingState.Success:
         return widget.contentView;
         break;
-      case LoadingState.State_Loading:
-        return _buildLoadingView();
-        break;
-      case LoadingState.State_Empty:
-        return _buildEmptyView();
-        break;
-      case LoadingState.State_Error:
-        return _buildErrorView();
-        break;
-      case LoadingState.State_No_Network:
-        return _buildNoNetworkView();
+      case LoadingState.NoNetwork:
+        return widget.noNetworkView ?? _buildNoNetworkView();
         break;
       default:
         return Container();

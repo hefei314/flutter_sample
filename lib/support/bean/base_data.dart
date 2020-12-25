@@ -1,3 +1,4 @@
+import 'package:flutter_sample/support/bean/article_bean.dart';
 import 'package:flutter_sample/support/bean/splash_bean.dart';
 import 'package:flutter_sample/support/bean/user_info.dart';
 
@@ -58,6 +59,8 @@ class BaseData<T> {
         return List<SplashBean>();
       case 'UserInfo':
         return List<UserInfo>();
+      case 'ArticleBean':
+        return List<ArticleBean>();
     }
     return null;
   }
@@ -68,6 +71,8 @@ class BaseData<T> {
         return SplashBean.fromJson(json);
       case 'UserInfo':
         return UserInfo.fromJson(json);
+      case 'ArticleBean':
+        return ArticleBean.fromJson(json);
     }
     return null;
   }

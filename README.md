@@ -2,15 +2,49 @@
 
 A sample for Flutter.
 
-## Getting Started
+## Modules
+- 基础组件
 
-This project is a starting point for a Flutter application.
+- 自定义组件
 
-A few resources to get you started if this is your first Flutter project:
+    - LoadingLayout
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+        > 多状态布局，包含加载中、无数据、出错、无网络四种状态
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    - 
+
+- 其他
+
+    - 国际化
+
+        ```dart
+        1.使用插件 Flutter Intl
+            (1)pubspec.yaml中添加
+               dependencies:
+            	 flutter_localizations:
+                   sdk: flutter
+            (2)Tools >> Flutter Intl >> Initialize for the Project
+               此时lib下将添加generated以及l10n文件夹;
+        	   pubspec.yaml将中添加
+               flutter_intl:
+                 enabled: true
+            (3)Tools >> Flutter Intl >> Add Locale 添加语言支持，在l10n文件夹中开始翻译
+            (4)main.dart中添加国际化支持
+               MaterialApp(
+                  ...
+                  onGenerateTitle: (context) {
+                    return S.of(context).appName;
+                  },
+                  localizationsDelegates: const [
+                    S.delegate,
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate
+                  ],
+                  supportedLocales: S.delegate.supportedLocales,
+                  ...
+                );
+                使用方法：S.of(context).keyName 或者 S.current.keyName
+        
+        ```
+
