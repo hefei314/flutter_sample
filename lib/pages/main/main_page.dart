@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/pages/basic/basic_page.dart';
-import 'package:flutter_sample/pages/example/example_page.dart';
+import 'package:flutter_sample/pages/examples/examples_page.dart';
+import 'package:flutter_sample/pages/widgets/widgets_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 ///
@@ -32,10 +32,10 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
             controller: _tabController,
             tabs: <Tab>[
               Tab(
-                text: "Basic",
+                text: "Widgets",
               ),
               Tab(
-                text: "Example",
+                text: "Examples",
               ),
             ],
           ),
@@ -43,8 +43,8 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
         body: TabBarView(
           controller: _tabController,
           children: <Widget>[
-            BasicPage(),
-            ExamplePage(),
+            WidgetsPage(),
+            ExamplesPage(),
           ],
         ),
       ),

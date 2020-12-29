@@ -16,6 +16,13 @@ class NavigatorUtil {
   }
 
   ///
+  /// 跳转页面
+  ///
+  static void goPage(BuildContext context, String routeName) {
+    Navigator.pushNamed(context, routeName);
+  }
+
+  ///
   /// 跳转到通用web页
   ///
   static void goCommonWebPage(BuildContext context, String url, String title) {

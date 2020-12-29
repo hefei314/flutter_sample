@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/pages/example/loading/example_loading_view_model.dart';
 import 'package:flutter_sample/support/utils/other_util.dart';
 import 'package:flutter_sample/widgets/loading_layout.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+
+import 'example_loading_view_model.dart';
 
 ///
 /// author: hefei
