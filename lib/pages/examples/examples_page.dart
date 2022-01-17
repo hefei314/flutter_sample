@@ -57,7 +57,7 @@ class _ExamplesPageState extends State<ExamplesPage> {
           return ExampleLifecyclePage();
         }));
         break;
-      case 0:
+      case 1:
         // LoadingLayout
         Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
           return ExampleLoadingPage();
